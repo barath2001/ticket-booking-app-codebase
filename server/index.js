@@ -17,7 +17,7 @@ const bcrypt = require('bcryptjs')
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect('mongodb://localhost:27017/full-mern-stack-video')
+mongoose.connect('mongodb://localhost:27017/project')
 
 app.post('/api/register', async (req, res) => {
 	console.log(req.body)
