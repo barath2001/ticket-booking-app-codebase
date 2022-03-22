@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 
 function MovieDetails () {
     let { id } = useParams();
+    console.log(id);
     return (
         <div>
             <h1>movie details</h1>
