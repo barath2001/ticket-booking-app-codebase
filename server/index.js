@@ -1,16 +1,11 @@
-// MERN = Mongo + Express + React + Node
-
-// Development = Node.js server + React server
-
-// MEN
-
-// E - Express
-
 const express = require('express')
 const app = express()
 const cors = require('cors')
+
 const mongoose = require('mongoose')
 const User = require('./models/user.model')
+const Movie = require('./models/movie.model')
+
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 
@@ -18,6 +13,28 @@ app.use(cors())
 app.use(express.json())
 
 mongoose.connect('mongodb://localhost:27017/project')
+var db = mongoose.connection;
+
+app.get('/api/moviedata', async (req, res) => {
+	try {
+		await Movie.find({}, function (err, moviedata) {
+			if (err) {
+				console.log(error)
+			}
+			else {
+				console.log('query successful')
+				console.log(moviedata)
+				res.json({movieList: moviedata})
+			}
+		});
+
+	} catch (error) {
+		console.log(error)
+		res.json({ status: 'error', error: 'invalid token' })
+	}
+	// console.log("data sent")
+	// res.json({status: "ok"})
+})
 
 app.post('/api/register', async (req, res) => {
 	console.log(req.body)

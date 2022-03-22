@@ -1,10 +1,37 @@
 import MovieCard from './MovieCard'
+import { useState, useEffect } from 'react'
+// async function getmovies () {
+//     await fetch('http://localhost:1337/api/moviedata')
+//     .then(res => {
+//         res.json();
+//         // console.log((res));
+//     })
+//     .then(data => {
+//         console.log(data)
+//     })
+// }
 
 function MovieList() {
+    const [listItems, setlistItems] = useState([])
 
-    const data = [{ id: 1, title: "movie1" }, { id: 2, title: "movie2" }]
-    const listItems = data.map((movieInfo) => <MovieCard key = {movieInfo.id} movieInfo={movieInfo} />)
+    useEffect(() => {
+        async function getmovies() {
+            const response = await fetch('http://localhost:1337/api/moviedata', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+    
+            const data = await response.json()
+            setlistItems(data.movieList.map((movieInfo) => <MovieCard key = {movieInfo.id} movieInfo={movieInfo} />))
+        }
+    
+        getmovies();
 
+    }, [])
+    //moviedata.movieList.map((movieInfo) => <MovieCard key = {movieInfo.id} movieInfo={movieInfo} />)
+    //moviedata.movieList.map((movieInfo) => console.log(movieInfo))
     return (
         <div>
             {listItems}
