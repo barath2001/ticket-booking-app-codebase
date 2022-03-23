@@ -1,13 +1,38 @@
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from 'react';
 
-function MovieDetails () {
+function MovieDetails() {
     let { id } = useParams();
-    console.log(id);
+
+    const [movieComponent, setmovieComponent] = useState([])
+
+    useEffect(() => {
+        async function getmoviedetails() {
+            const response = await fetch('http://localhost:1337/api/moviedetails/' + id, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+
+            const data = await response.json()
+            setmovieComponent( data.movieDetails )
+        }
+        getmoviedetails();
+
+    }, [])
+    console.log(movieComponent)
     return (
-        <div>
-            <h1>movie details</h1>
-            <h2>{id}</h2>
-        </div>
+        // {movieComponent}
+        <>
+        <p>hekki</p>
+        {movieComponent.length > 0 && movieComponent.map((movieComponent) => 
+            < div key={movieComponent.id}>
+                <h1>{movieComponent.name}</h1>
+                <h2>{movieComponent.id}</h2>
+            </div >
+            )}
+            </>
     )
 }
 

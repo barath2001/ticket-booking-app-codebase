@@ -1,8 +1,8 @@
 import { useState } from 'react'
-//import { useHistory } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
 
 function App() {
-	//const history = useHistory()
+	//const history = useHistory();
 
 	const [name, setName] = useState('')
 	const [email, setEmail] = useState('')

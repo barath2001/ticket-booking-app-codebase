@@ -19,12 +19,33 @@ app.get('/api/moviedata', async (req, res) => {
 	try {
 		await Movie.find({}, function (err, moviedata) {
 			if (err) {
-				console.log(error)
+				console.log(err)
 			}
 			else {
 				console.log('query successful')
 				console.log(moviedata)
 				res.json({movieList: moviedata})
+			}
+		});
+
+	} catch (error) {
+		console.log(error)
+		res.json({ status: 'error', error: 'invalid token' })
+	}
+	// console.log("data sent")
+	// res.json({status: "ok"})
+})
+
+app.get('/api/moviedetails/:id', async (req, res) => {
+	try {
+		await Movie.find({id: req.params.id}, function (err, movieDetails) {
+			if (err) {
+				console.log(error)
+			}
+			else {
+				console.log('query successful')
+				console.log(movieDetails)
+				res.json({movieDetails})
 			}
 		});
 

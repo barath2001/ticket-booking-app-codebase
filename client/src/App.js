@@ -5,6 +5,7 @@ import Register from './components/Register'
 //import Dashboard from './components/Dashboard'
 import MovieList from './components/MovieList'
 import MovieDetails from './components/MovieDetails'
+//import MovieCard from './components/MovieCard'
 const App = () => {
 	return (
 		<div>
@@ -15,6 +16,7 @@ const App = () => {
 					{/*<Route path="/dashboard" exact component={Dashboard} /> */}
 					<Route path="/movieList" exact element={<MovieList/>} />
 					<Route path="/movieDetails/:id" element={<MovieDetails/>} />
+					{/*<Route path="/movieCard" element={<MovieCard/>} />*/}
 				</Routes>
 			</BrowserRouter>
 		</div>
