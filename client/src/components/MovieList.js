@@ -1,5 +1,6 @@
 import MovieCard from './MovieCard'
 import { useState, useEffect } from 'react'
+import "./MovieList.css"
 // async function getmovies () {
 //     await fetch('http://localhost:1337/api/moviedata')
 //     .then(res => {
@@ -33,7 +34,7 @@ function MovieList() {
     //moviedata.movieList.map((movieInfo) => <MovieCard key = {movieInfo.id} movieInfo={movieInfo} />)
     //moviedata.movieList.map((movieInfo) => console.log(movieInfo))
     return (
-        <div>
+        <div className = "basic-grid">
             {listItems}
         </div>
     )
