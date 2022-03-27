@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.container--left {
+    width: 60%;
+}
+
+.container--right {
+    width: 40%;
+}
+
+.basic--grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
+}
+
+.seat {
+    background-color: skyblue;
+}
+
+.seat--booked {
+    background-color: blueviolet;
+}
