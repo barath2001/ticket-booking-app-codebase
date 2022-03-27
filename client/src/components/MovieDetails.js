@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from 'react';
-
-function MovieDetails() {
+import "./MovieDetails.css"
+function MovieDetails(props) {
     let { id } = useParams();
 
     const [movieComponent, setmovieComponent] = useState([])
@@ -25,14 +25,26 @@ function MovieDetails() {
     return (
         // {movieComponent}
         <>
-        <p>hekki</p>
+
         {movieComponent.length > 0 && movieComponent.map((movieComponent) => 
-            < div key={movieComponent.id}>
-                <h1>{movieComponent.name}</h1>
-                <h2>{movieComponent.id}</h2>
+            
+            < div className="details" key={movieComponent.id}>
+                <div className="big-img">
+                    <img src={movieComponent.image} alt=""/>
+                </div>
+                <div className="box">
+                    <div className="row">
+                        <h2>{movieComponent.name}</h2>
+                        <span>{movieComponent.censor}</span>
+                    </div>
+                    <p>{movieComponent.description}</p>
+                    <p>Director {movieComponent.director}</p>
+                    <p>Cast {movieComponent.cast}</p>
+                    <button className="bookbtn" onClick={()=>{window.location.href = '/movieShows/' + movieComponent.id}}>Book Now</button>
+                </div>
             </div >
             )}
-            </>
+        </>
     )
 }
 

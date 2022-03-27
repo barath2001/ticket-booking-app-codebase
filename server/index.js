@@ -5,6 +5,7 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 const User = require('./models/user.model')
 const Movie = require('./models/movie.model')
+const Show = require('./models/show.model')
 
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
@@ -36,6 +37,42 @@ app.get('/api/moviedata', async (req, res) => {
 	// res.json({status: "ok"})
 })
 
+app.get('/api/getseats/:id', async (req, res) => {
+	try {
+		console.log(req.params.id)
+		await Show.find({show_id: req.params.id}, function (err, showDetails) {
+			if (err) {
+				console.log(error)
+			}
+			else {
+				console.log('query successful')
+				console.log(showDetails.seats)
+				res.json({showDetails})
+			}
+		});
+
+	} catch (error) {
+		console.log(error)
+		res.json({ status: 'error', error: 'invalid token' })
+	}
+	// console.log("data sent")
+	// res.json({status: "ok"})
+})
+
+app.put('/api/updateseats/:id', async (req, res) => {
+	console.log(req.body)
+	try {
+		await Show.updateOne(
+{show_id: req.params.id}, { $set: {seats: req.body.seats} } , function(err, res) {
+    if (err) throw err;
+    console.log("1 show updated");
+  });
+		res.json({ status: 'ok' })
+	} catch (err) {
+		res.json({ status: 'error'})
+	}
+})
+
 app.get('/api/moviedetails/:id', async (req, res) => {
 	try {
 		await Movie.find({id: req.params.id}, function (err, movieDetails) {
@@ -46,6 +83,27 @@ app.get('/api/moviedetails/:id', async (req, res) => {
 				console.log('query successful')
 				console.log(movieDetails)
 				res.json({movieDetails})
+			}
+		});
+
+	} catch (error) {
+		console.log(error)
+		res.json({ status: 'error', error: 'invalid token' })
+	}
+	// console.log("data sent")
+	// res.json({status: "ok"})
+})
+
+app.get('/api/movieshows/:id', async (req, res) => {
+	try {
+		await Show.find({movie_id: req.params.id}, function (err, showDetails) {
+			if (err) {
+				console.log(error)
+			}
+			else {
+				console.log('query successful')
+				console.log(showDetails)
+				res.json({showDetails})
 			}
 		});
 
@@ -137,3 +195,5 @@ app.post('/api/quote', async (req, res) => {
 app.listen(1337, () => {
 	console.log('Server started on 1337')
 })
+
+
