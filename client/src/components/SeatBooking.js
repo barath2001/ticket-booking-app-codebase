@@ -47,3 +47,4 @@ function SeatBooking(props) {
     )
 }
 export default SeatBooking;
+
