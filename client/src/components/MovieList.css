@@ -1,4 +1,12 @@
+.movielist-container {
+    width: 80%;
+    margin: 50px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
 .basic-grid {
+
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));

@@ -5,8 +5,11 @@ import "./SeatBooking.css"
 
 function SeatBooking(props) {
 
+    const [allSeats, setallSeats] = useState([])
     const [bookedSeats, setbookedSeats] = useState([])
     let { showid } = useParams();
+
+
 
     useEffect(() => {
         async function getseatdetails() {
@@ -18,12 +21,18 @@ function SeatBooking(props) {
             })
 
             const data = await response.json()
-            console.log("data",  data)
-            setbookedSeats(JSON.stringify(data.seats))
-            console.log("bookedSeats",bookedSeats)
+            console.log("data",  data.showDetails.seats)
+            //setallSeats(JSON.stringify(data.showDetails.seats))
+            setallSeats(data.showDetails.seats)
+            console.log("allSeats",allSeats)
         }
         getseatdetails();
-    }, [bookedSeats,showid])
+    }, [])
+
+    useEffect(() => {
+        console.log("allseats",allSeats)
+        setbookedSeats(allSeats.filter(seat => seat.booked == true).map(seat => seat.seat_id))
+    }, [])
 
     return (
         <div className="container">
@@ -31,20 +40,20 @@ function SeatBooking(props) {
                 <p>Seats</p>
                 <div className="basic--grid">
                     {
-                        // bookedSeats.length > 0 &&
-                        // bookedSeats.map(
-                            
-                        // )
+                        allSeats.length > 0 && allSeats.map (
+                            seat => <Seat key={seat.seat_id} seat_id={seat.seat_id} setbookedSeats={setbookedSeats} isbooked = {seat.booked} />
+                        )
                     }
-                    {/* {seatid.length > 0 && seatid.map(id => <Seat key={id} id={id} setbookedSeats={setbookedSeats} />)} */}
+                    {/* {seatid.length > 0 && seatid.map(id => <Seat key={id} id={id} setallSeats={setallSeats} />)} */}
                 </div>
             </div>
             <div className="container--right">
                 <h2>Booked seats</h2>
-                <p>{bookedSeats}</p>
+                {
+                    bookedSeats.length > 0 && bookedSeats.map(seat_id => <li>{seat_id}</li>)
+                }
             </div>
         </div>
     )
 }
 export default SeatBooking;
-

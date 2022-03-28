@@ -23,20 +23,25 @@ function MovieList() {
                     'Content-Type': 'application/json',
                 }
             })
-    
+
             const data = await response.json()
-            setlistItems(data.movieList.map((movieInfo) => <MovieCard key = {movieInfo.id} movieInfo={movieInfo} />))
+            setlistItems(data.movieList.map((movieInfo) => <MovieCard key={movieInfo.id} movieInfo={movieInfo} />))
         }
-    
+
         getmovies();
 
     }, [])
     //moviedata.movieList.map((movieInfo) => <MovieCard key = {movieInfo.id} movieInfo={movieInfo} />)
     //moviedata.movieList.map((movieInfo) => console.log(movieInfo))
     return (
-        <div className = "basic-grid">
-            {listItems}
-        </div>
+        <>
+            <div className="movielist-container">
+                <h2>All movies</h2>
+                <div className="basic-grid">
+                    {listItems}
+                </div>
+            </div>
+        </>
     )
 }
 

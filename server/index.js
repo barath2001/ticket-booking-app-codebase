@@ -25,7 +25,7 @@ app.get('/api/moviedata', async (req, res) => {
 			else {
 				console.log('query successful')
 				console.log(moviedata)
-				res.json({movieList: moviedata})
+				res.json({ movieList: moviedata })
 			}
 		});
 
@@ -40,14 +40,14 @@ app.get('/api/moviedata', async (req, res) => {
 app.get('/api/getseats/:id', async (req, res) => {
 	try {
 		console.log(req.params.id)
-		await Show.find({show_id: req.params.id}, function (err, showDetails) {
+		await Show.findOne({ show_id: req.params.id }, function (err, showDetails) {
 			if (err) {
 				console.log(error)
 			}
 			else {
 				console.log('query successful')
 				console.log(showDetails.seats)
-				res.json({showDetails})
+				res.json({ showDetails})
 			}
 		});
 
@@ -63,26 +63,26 @@ app.put('/api/updateseats/:id', async (req, res) => {
 	console.log(req.body)
 	try {
 		await Show.updateOne(
-{show_id: req.params.id}, { $set: {seats: req.body.seats} } , function(err, res) {
-    if (err) throw err;
-    console.log("1 show updated");
-  });
+			{ show_id: req.params.id }, { $set: { seats: req.body.seats } }, function (err, res) {
+				if (err) throw err;
+				console.log("1 show updated");
+			});
 		res.json({ status: 'ok' })
 	} catch (err) {
-		res.json({ status: 'error'})
+		res.json({ status: 'error' })
 	}
 })
 
 app.get('/api/moviedetails/:id', async (req, res) => {
 	try {
-		await Movie.find({id: req.params.id}, function (err, movieDetails) {
+		await Movie.find({ id: req.params.id }, function (err, movieDetails) {
 			if (err) {
 				console.log(error)
 			}
 			else {
 				console.log('query successful')
 				console.log(movieDetails)
-				res.json({movieDetails})
+				res.json({ movieDetails })
 			}
 		});
 
@@ -96,14 +96,14 @@ app.get('/api/moviedetails/:id', async (req, res) => {
 
 app.get('/api/movieshows/:id', async (req, res) => {
 	try {
-		await Show.find({movie_id: req.params.id}, function (err, showDetails) {
+		await Show.find({ movie_id: req.params.id }, function (err, showDetails) {
 			if (err) {
 				console.log(error)
 			}
 			else {
 				console.log('query successful')
 				console.log(showDetails)
-				res.json({showDetails})
+				res.json({ showDetails })
 			}
 		});
 
@@ -196,4 +196,15 @@ app.listen(1337, () => {
 	console.log('Server started on 1337')
 })
 
-
+// Show.create({
+// 	show_id: "s1",
+// 	movie_id: "1",
+// 	date: "25-03-2022",
+// 	time: "9:30 AM",
+// 	seats: [
+// 	{ seat_id: "1", price: 100, booked: true }, 
+// 	{ seat_id: "2", price: 200, booked: false }, 
+// 	{ seat_id: "3", price: 100, booked: true }, 
+// 	{ seat_id: "4", price: 200, booked: false }
+// ]
+// })

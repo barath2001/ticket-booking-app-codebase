@@ -1,24 +1,21 @@
-import {useState} from 'react'
+import { useState } from 'react'
 
-function Seat (props) {
-    const [booked, setBooked] = useState(0)
-    function handleClick () {
+function Seat(props) {
+    const [booked, setBooked] = useState((props.isbooked == true)?1:0)
+    function handleClick() {
         if (booked === 0) {
             setBooked(1);
-            props.setbookedSeats(prevBooked => [...prevBooked,props.id])
+            props.setbookedSeats(prevbookedSeats => [...prevbookedSeats,props.seat_id])
         }
         else {
             setBooked(0);
-            props.setbookedSeats(prevBooked => prevBooked.filter(id => id!==props.id))
+            props.setbookedSeats(prevbookedSeats => prevbookedSeats.filter(seat_id => seat_id != props.seat_id))
         }
-        console.log(booked)
     }
 
     return (
-        <div className = {(booked === 1) ? "seat seat--booked" : "seat"} onClick={handleClick}>
-            {props.id}
-            {":"}
-            {booked}
+        <div className={(booked === 1) ? "seat seat--booked" : "seat"} onClick={handleClick}>
+            {props.seat_id}
         </div>
     )
 }
