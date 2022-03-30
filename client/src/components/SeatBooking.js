@@ -37,7 +37,7 @@ function SeatBooking(props) {
     return (
         <div className="container">
             <div className="container--left">
-                <p>Seats</p>
+                <h2>Seats</h2>
                 <div className="basic--grid">
                     {
                         allSeats.length > 0 && allSeats.map (
@@ -50,7 +50,7 @@ function SeatBooking(props) {
             <div className="container--right">
                 <h2>Booked seats</h2>
                 {
-                    bookedSeats.length > 0 && bookedSeats.map(seat_id => <li>{seat_id}</li>)
+                    bookedSeats.length > 0 && bookedSeats.map(seat_id => <strong>{seat_id + " "}</strong>)
                 }
             </div>
         </div>

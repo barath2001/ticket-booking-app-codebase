@@ -36,7 +36,7 @@ function MovieList() {
     return (
         <>
             <div className="movielist-container">
-                <h2>All movies</h2>
+                <h2>All Movies</h2>
                 <div className="basic-grid">
                     {listItems}
                 </div>

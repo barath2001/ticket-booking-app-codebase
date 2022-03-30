@@ -15,7 +15,7 @@ function Seat(props) {
 
     return (
         <div className={(booked === 1) ? "seat seat--booked" : "seat"} onClick={handleClick}>
-            {props.seat_id}
+            <p>{props.seat_id}</p>
         </div>
     )
 }

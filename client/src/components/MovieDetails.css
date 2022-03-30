@@ -3,12 +3,16 @@
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 30px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
   }
 
   .details .big-img{
     max-width: 500px;
     min-width: 290px;
     overflow: hidden;
+    border-radius: 10px;
     margin: 25px;
   }
   .big-img img{
@@ -40,11 +44,15 @@
     margin: 15px 0;
   }
   .box .bookbtn{
-    background: #333;
-    color: white;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px 25px;
-    margin-top: 15px;
+    border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-top: 10px;
+	transition: transform 80ms ease-in;
   }

@@ -28,7 +28,8 @@ function MovieDetails(props) {
 
         {movieComponent.length > 0 && movieComponent.map((movieComponent) => 
             
-            < div className="details" key={movieComponent.id}>
+            < div className="details" key={movieComponent.id} style={{backgroundImage: `url(${movieComponent.bgimage})`}}>
+                
                 <div className="big-img">
                     <img src={movieComponent.image} alt=""/>
                 </div>

@@ -23,8 +23,9 @@ function MovieShows() {
     console.log(showComponent)
     return (
         <>
-
+        
         {showComponent.length > 0 && showComponent.map((showComponent) => 
+            
             <button onClick={()=>{window.location.href = '/seatbooking/' + showComponent.show_id}}>{showComponent.date}</button>
             
             )}

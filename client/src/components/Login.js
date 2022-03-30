@@ -25,7 +25,7 @@ function App() {
 		if (data.user) {
 			localStorage.setItem('token', data.user)
 			alert('Login successful')
-			window.location.href = '/dashboard'
+			window.location.href = '/movieList'
 		} else {
 			alert('Please check your username and password')
 		}
@@ -55,8 +55,8 @@ function App() {
 			<div class="auth--overlay-container">
 				<div class="auth--overlay">
 					<div class="auth--overlay-panel auth--overlay-right">
-						<h1>HTML CSS Login Form</h1>
-						<p>This login form is created using pure HTML and CSS. For social icons, FontAwesome is used.</p>
+						<h1>Theatre Ticket Booking</h1>
+						<p>Log In to book movie tickets from anywhere and at anytime!</p>
 					</div>
 				</div>
 			</div>
