@@ -9,8 +9,6 @@ function SeatBooking(props) {
     const [bookedSeats, setbookedSeats] = useState([])
     let { showid } = useParams();
 
-
-
     useEffect(() => {
         async function getseatdetails() {
             const response = await fetch('http://localhost:1337/api/getseats/' + showid, {
