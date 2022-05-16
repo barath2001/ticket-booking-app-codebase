@@ -10,6 +10,7 @@ import Navbar from './components/Navbar'
 //import MovieCard from './components/MovieCard'
 import SeatBooking from "./components/SeatBooking"
 import Admin from "./components/Admin"
+
 const App = () => {
 	return (
 		<div>
@@ -27,7 +28,6 @@ const App = () => {
 					<Route path="/seatbooking/:showid" element = {<SeatBooking/>} />
 				</Routes>
 			</BrowserRouter>
-			
 		</div>
 	)
 }

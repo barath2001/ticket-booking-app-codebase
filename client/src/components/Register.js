@@ -36,18 +36,21 @@ function App() {
 				<form onSubmit={registerUser}>
 					<h1>Register</h1>
 					<input
+					id='Name'
 						value={name}
 						onChange={(e) => setName(e.target.value)}
 						type="text"
 						placeholder="Name"
 					/>
 					<input
+					id='Email'
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
 						type="email"
 						placeholder="Email"
 					/>
 					<input
+					id='Password'
 						value={password}
 						onChange={(e) => setPassword(e.target.value)}
 						type="password"

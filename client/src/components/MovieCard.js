@@ -5,7 +5,8 @@ function MovieCard(props) {
 	console.log(props)
 	return (
 		//<li onClick={()=>{window.location.href = '/movieDetails/' + props.movieInfo.id}}>{props.movieInfo.name}</li>
-		<div className="card" onClick={() => { window.location.href = '/movieDetails/' + props.movieInfo.id }}>
+		<div id={props.movieInfo.id}
+		className="card" onClick={() => { window.location.href = '/movieDetails/' + props.movieInfo.id }}>
 			<img className="card--image" src={props.movieInfo.image} />
 			<h3>{props.movieInfo.name}</h3>
 			<p>{props.movieInfo.genre}</p>

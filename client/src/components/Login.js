@@ -1,8 +1,9 @@
+import react from 'react'
 import { useState } from 'react'
 import styled from "styled-components";
 import "./auth.css"
 
-function App() {
+const Login = () => {
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 
@@ -32,56 +33,36 @@ function App() {
 	}
 
 	return (
-		<div class="auth--container" id="auth--container">
-			<div class="auth--form-container auth--log-in-container">
+		<div className="auth--container" id="auth--container">
+			<div className="auth--form-container auth--log-in-container">
 				<form onSubmit={loginUser}>
-					<h1>Login</h1>
-					<input
+					<h1 id='login-heading'>Login</h1>
+					<input id='Email'
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
 						type="email"
 						placeholder="Email"
 					/>
-					<input
+					<input id='Password'
 						value={password}
 						onChange={(e) => setPassword(e.target.value)}
 						type="password"
 						placeholder="Password"
 					/>
 					<a href="#">Forgot your password?</a>
-					<button type="submit">Log In</button>
+					<button id='login-button' type="submit">Log In</button>
 				</form>
 			</div>
-			<div class="auth--overlay-container">
-				<div class="auth--overlay">
-					<div class="auth--overlay-panel auth--overlay-right">
+			<div className="auth--overlay-container">
+				<div className="auth--overlay">
+					<div className="auth--overlay-panel auth--overlay-right">
 						<h1>Theatre Ticket Booking</h1>
 						<p>Log In to book movie tickets from anywhere and at anytime!</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		// <div>
-		// 	<h1>Login</h1>
-		// 	<form onSubmit={loginUser}>
-		// 		<input
-		// 			value={email}
-		// 			onChange={(e) => setEmail(e.target.value)}
-		// 			type="email"
-		// 			placeholder="Email"
-		// 		/>
-		// 		<br />
-		// 		<input
-		// 			value={password}
-		// 			onChange={(e) => setPassword(e.target.value)}
-		// 			type="password"
-		// 			placeholder="Password"
-		// 		/>
-		// 		<br />
-		// 		<input type="submit" value="Log In" />
-		// 	</form>
-		// </div>
 	)
 }
 
-export default App
+export default Login
