@@ -1,0 +1,254 @@
+[
+  {
+    "_id": {
+      "$oid": "62404ac6a3094926f0966bcf"
+    },
+    "show_id": "s1",
+    "movie_id": "1",
+    "date": "25-03-2022",
+    "time": "9:30 AM",
+    "seats": [
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd0"
+        },
+        "seat_id": "1",
+        "price": 100,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd1"
+        },
+        "seat_id": "2",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd2"
+        },
+        "seat_id": "3",
+        "price": 100,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "4",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "5",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "6",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "7",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "8",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "9",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "10",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "11",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "12",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "13",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "14",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "15",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd0"
+        },
+        "seat_id": "1",
+        "price": 100,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd1"
+        },
+        "seat_id": "2",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd2"
+        },
+        "seat_id": "3",
+        "price": 100,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "4",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "5",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "6",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "7",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "8",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "9",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "10",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "11",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "12",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "13",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "14",
+        "price": 200,
+        "booked": false
+      },
+      {
+        "_id": {
+          "$oid": "62404ac6a3094926f0966bd3"
+        },
+        "seat_id": "15",
+        "price": 200,
+        "booked": false
+      }
+    ],
+    "__v": 0
+  }
+]

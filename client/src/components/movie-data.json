@@ -1,0 +1,151 @@
+[{
+  "_id": {
+    "$oid": "6239622714548534f8976398"
+  },
+  "id": "1",
+  "name": "Rio",
+  "genre": "comedy",
+  "image": "https://upload.wikimedia.org/wikipedia/en/b/bb/Rio2011Poster.jpg",
+  "bgimage": "../m1.png",
+  "description": "Rio is a 2011 American 3D computer-animated musical adventure comedy film produced by Blue Sky Studios and 20th Century Fox Animation, and directed by Carlos Saldanha.",
+  "censor": "U/A",
+  "director": "Carlos Saldanha",
+  "cast": "Birds",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623cbe77bf567479df4062c2"
+  },
+  "id": "2",
+  "name": "Incredibles",
+  "genre": "action",
+  "image": "https://upload.wikimedia.org/wikipedia/en/2/27/The_Incredibles_%282004_animated_feature_film%29.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623cbe7fbf567479df4062c3"
+  },
+  "id": "3",
+  "name": "Moana",
+  "genre": "adventure",
+  "image": "https://upload.wikimedia.org/wikipedia/en/2/26/Moana_Teaser_Poster.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623cbe8ebf567479df4062c4"
+  },
+  "id": "4",
+  "name": "Storks",
+  "genre": "comedy",
+  "image": "https://upload.wikimedia.org/wikipedia/en/1/13/Storks_%28film%29_poster_2.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "623cbe95bf567479df4062c5"
+  },
+  "id": "5",
+  "name": "Madagascar",
+  "genre": "action, adventure",
+  "image": "https://upload.wikimedia.org/wikipedia/en/3/36/Madagascar_Theatrical_Poster.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6243e4a06ac31271cd121293"
+  },
+  "id": "6",
+  "name": "Madagascar",
+  "genre": "action, adventure",
+  "image": "https://upload.wikimedia.org/wikipedia/en/3/36/Madagascar_Theatrical_Poster.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6243e4ce6ac31271cd121294"
+  },
+  "id": "7",
+  "name": "Storks",
+  "genre": "comedy",
+  "image": "https://upload.wikimedia.org/wikipedia/en/1/13/Storks_%28film%29_poster_2.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6243e4d46ac31271cd121295"
+  },
+  "id": "8",
+  "name": "Moana",
+  "genre": "adventure",
+  "image": "https://upload.wikimedia.org/wikipedia/en/2/26/Moana_Teaser_Poster.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6243e4d96ac31271cd121296"
+  },
+  "id": "9",
+  "name": "Incredibles",
+  "genre": "action",
+  "image": "https://upload.wikimedia.org/wikipedia/en/2/27/The_Incredibles_%282004_animated_feature_film%29.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6243e4dd6ac31271cd121297"
+  },
+  "id": "10",
+  "name": "Rio",
+  "genre": "comedy",
+  "image": "https://upload.wikimedia.org/wikipedia/en/b/bb/Rio2011Poster.jpg",
+  "bgimage": "../m1.png",
+  "description": "Rio is a 2011 American 3D computer-animated musical adventure comedy film produced by Blue Sky Studios and 20th Century Fox Animation, and directed by Carlos Saldanha.",
+  "censor": "U/A",
+  "director": "Nelson Dilipkumar",
+  "cast": "Vijay, Pooja Hegde, Selvaraghavan",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6243e4f46ac31271cd121298"
+  },
+  "id": "11",
+  "name": "Rio",
+  "genre": "comedy",
+  "image": "https://upload.wikimedia.org/wikipedia/en/b/bb/Rio2011Poster.jpg",
+  "bgimage": "../m1.png",
+  "description": "Rio is a 2011 American 3D computer-animated musical adventure comedy film produced by Blue Sky Studios and 20th Century Fox Animation, and directed by Carlos Saldanha.",
+  "censor": "U/A",
+  "director": "Nelson Dilipkumar",
+  "cast": "Vijay, Pooja Hegde, Selvaraghavan",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6243e4f86ac31271cd121299"
+  },
+  "id": "12",
+  "name": "Incredibles",
+  "genre": "action",
+  "image": "https://upload.wikimedia.org/wikipedia/en/2/27/The_Incredibles_%282004_animated_feature_film%29.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6243e4fc6ac31271cd12129a"
+  },
+  "id": "13",
+  "name": "Moana",
+  "genre": "adventure",
+  "image": "https://upload.wikimedia.org/wikipedia/en/2/26/Moana_Teaser_Poster.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6243e5046ac31271cd12129b"
+  },
+  "id": "14",
+  "name": "Madagascar",
+  "genre": "action, adventure",
+  "image": "https://upload.wikimedia.org/wikipedia/en/3/36/Madagascar_Theatrical_Poster.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6243e5086ac31271cd12129c"
+  },
+  "id": "15",
+  "name": "Storks",
+  "genre": "comedy",
+  "image": "https://upload.wikimedia.org/wikipedia/en/1/13/Storks_%28film%29_poster_2.jpg",
+  "__v": 0
+}]
