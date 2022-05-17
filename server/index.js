@@ -13,7 +13,9 @@ const bcrypt = require('bcryptjs')
 app.use(cors())
 app.use(express.json())
 
+// mongoose.connect('mongodb://localhost:27017/project')
 mongoose.connect('mongodb://localhost:27017/project')
+
 var db = mongoose.connection;
 
 app.get('/api/moviedata', async (req, res) => {

@@ -17,7 +17,7 @@ const App = () => {
 			<Navbar/>
 			<BrowserRouter>
 				<Routes>
-					<Route path="/login" exact element={<Login/>} />
+					<Route path="/" exact element={<Login/>} />
 					<Route path="/register" exact element={<Register/>} />
 					<Route path="/admin" exact element={<Admin/>} />
 					{/*<Route path="/dashboard" exact component={Dashboard} /> */}
